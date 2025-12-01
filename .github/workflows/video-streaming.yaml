@@ -15,7 +15,7 @@ on:
     branches:
       - main
     paths:
-      - video-streaming
+      - video-streaming/**
 
   #
   # Allows deployment to be invoked manually through the GitHub Actions user interface.

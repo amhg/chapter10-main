@@ -14,8 +14,8 @@ on:
   push: 
     branches:
       - main
-    #paths:
-    #  - gateway/**
+    paths:
+      - gateway/**
 
   #
   # Allows deployment to be invoked manually through the GitHub Actions user interface.

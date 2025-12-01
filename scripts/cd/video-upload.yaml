@@ -8,7 +8,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: video-upload
-  namespace: flixtube-namespace
 spec:
   replicas: 1
   selector:

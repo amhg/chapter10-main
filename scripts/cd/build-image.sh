@@ -19,4 +19,4 @@ set -u # or set -o nounset
 : "$NAME"
 : "$DIRECTORY"
 
-docker build -t $CONTAINER_REGISTRY/$NAME:$VERSION --file ./$DIRECTORY/Dockerfile-prod ./$DIRECTORY
+docker build --platform=linux/amd64 -t $CONTAINER_REGISTRY/$NAME:$VERSION --file ./$DIRECTORY/Dockerfile-prod ./$DIRECTORY

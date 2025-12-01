@@ -7,20 +7,20 @@
 
 name: Deploy mock-storage
 
-on:
+#on:
   #
   # Deploys the microservice on push to the specified subdirectory in the main branch of this code repository.
   #
-  push: 
-    branches:
-      - main
-    paths:
-      - mock-storage/**
+#  push: 
+#    branches:
+#      - main
+#    paths:
+#      - mock-storage/**
 
   #
   # Allows deployment to be invoked manually through the GitHub Actions user interface.
   #
-  workflow_dispatch: 
+#  workflow_dispatch: 
 
 jobs:
 
@@ -60,7 +60,7 @@ jobs:
       - uses: tale/kubectl-action@v1
         with:
           base64-kube-config: ${{ secrets.KUBE_CONFIG }}
-          kubectl-version: v1.24.2
+          kubectl-version: v1.32.0
       
       #
       # Expands the configuration template and deploys the microservice.

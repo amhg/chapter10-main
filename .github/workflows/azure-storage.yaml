@@ -5,22 +5,22 @@
 # For real use you might want to restrict this to the "prod" branch.
 #
 
-name: Deploy video-streaming
+name: Deploy mock-storage
 
-on:
+#on:
   #
   # Deploys the microservice on push to the specified subdirectory in the main branch of this code repository.
   #
-  push: 
-    branches:
-      - main
-    paths:
-      - video-streaming/**
+#  push: 
+#    branches:
+#      - main
+#    paths:
+#      - mock-storage/**
 
   #
   # Allows deployment to be invoked manually through the GitHub Actions user interface.
   #
-  workflow_dispatch: 
+#  workflow_dispatch: 
 
 jobs:
 
@@ -32,8 +32,8 @@ jobs:
       CONTAINER_REGISTRY: ${{ secrets.CONTAINER_REGISTRY }}
       REGISTRY_UN: ${{ secrets.REGISTRY_UN }}
       REGISTRY_PW: ${{ secrets.REGISTRY_PW  }}
-      NAME: video-streaming
-      DIRECTORY: video-streaming
+      NAME: azure-storage
+      DIRECTORY: azure-storage
 
     steps:
       

@@ -5,22 +5,22 @@
 # For real use you might want to restrict this to the "prod" branch.
 #
 
-name: Deploy mock-storage
+name: Deploy azure-storage
 
-#on:
+on:
   #
   # Deploys the microservice on push to the specified subdirectory in the main branch of this code repository.
   #
-#  push: 
-#    branches:
-#      - main
-#    paths:
-#      - mock-storage/**
+  push: 
+    branches:
+      - main
+    paths:
+      - azure-storage
 
   #
   # Allows deployment to be invoked manually through the GitHub Actions user interface.
   #
-#  workflow_dispatch: 
+  workflow_dispatch: 
 
 jobs:
 

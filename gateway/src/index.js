@@ -23,6 +23,7 @@ async function main() {
     // Main web page that lists videos.
     //
     app.get("/", async (req, res) => {
+        console.log('test')
 
         // Retreives the list of videos from the metadata microservice.
         const videosResponse = await axios.get("http://metadata/videos"); //"http://metadata/videos" http://localhost:3001/videos

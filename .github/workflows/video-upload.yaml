@@ -15,7 +15,7 @@ on:
     branches:
       - main
     paths:
-      - video-upload/**
+      - video-upload
 
   #
   # Allows deployment to be invoked manually through the GitHub Actions user interface.

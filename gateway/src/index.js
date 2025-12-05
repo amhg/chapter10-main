@@ -19,6 +19,27 @@ async function main() {
     
     app.use(express.static("public"));
 
+    app.get("/ready", (req, res) => {
+        // For testing: force failure
+        if (process.env.FORCE_READY_FAIL === "1") {
+            return res.status(400).send("Forced readiness failure");
+        }
+
+        // Your actual readiness logic here
+        res.status(200).send("OK");
+        });
+
+    app.get("/alive", (req, res) => {
+        // For testing: force failure
+        if (process.env.FORCE_ALIVE_FAIL === "1") {
+            return res.status(400).send("Forced liveness failure");
+        }
+
+        // Your actual liveness logic here
+        res.status(200).send("OK");
+    });
+
+
     //
     // Main web page that lists videos.
     //

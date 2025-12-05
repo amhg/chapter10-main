@@ -36,7 +36,7 @@ async function main() {
         }
 
         // Your actual liveness logic here
-        res.status(200).send("OK");
+        res.status(200).send("OKI");
     });
 
 

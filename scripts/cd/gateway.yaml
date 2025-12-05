@@ -37,7 +37,7 @@ spec:
         - name: RABBIT
           value: amqp://test:test@rabbit:5672
         - name: FORCE_READY_FAIL
-          value: 1
+          value: "1"
 ---
 apiVersion: v1
 kind: Service

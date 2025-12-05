@@ -22,6 +22,15 @@ spec:
       - name: gateway
         image: $CONTAINER_REGISTRY/gateway:$VERSION
         imagePullPolicy: IfNotPresent
+        readinessProbe:
+          httpGet:
+            path: /ready
+            port: {{PORT}}
+          initialDelaySeconds: 5
+        livenessProbe:
+          httpGet:
+            path: /alive
+            port: {{PORT}}
         env:
         - name: PORT
           value: "4000"
